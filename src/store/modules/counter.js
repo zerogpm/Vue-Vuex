@@ -20,6 +20,9 @@ const mutations = {
   decrement: (state, payload) => {
     state.counter -= payload
   },
+  divie: (state, playload) => {
+    state.counter = state.counter / playload
+  }
 }
 
 const actions = {
@@ -37,6 +40,11 @@ const actions = {
   asyncDecrement: ({commit}, payload) => {
     setTimeout(() => {
       commit('decrement', payload.by)
+    }, payload.duration)
+  },
+  asyncDivie: ({commit}, payload) => {
+    setTimeout(() => {
+      commit('divie', payload.by)
     }, payload.duration)
   }
 }
