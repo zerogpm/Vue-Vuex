@@ -20,8 +20,8 @@ const mutations = {
   decrement: (state, payload) => {
     state.counter -= payload
   },
-  divie: (state, playload) => {
-    state.counter = state.counter / playload
+  divie: (state, payload) => {
+    state.counter = state.counter / payload
   }
 }
 
